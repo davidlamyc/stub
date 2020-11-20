@@ -1,0 +1,24 @@
+resourcePath: /api/posts
+method: POST
+matchExpressions:
+- request:
+  - type: body
+    key: ${jsonpath}$.id
+    value: 99
+  response:
+    status: 503
+    headers:
+    - key: Content-Type
+      value: application/json
+    - key: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+    cookies:
+    - key: sessiondata
+      value: FAKESESSIONDATA
+    body: ${file}503_error.json
+- response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${script}post_posts.js

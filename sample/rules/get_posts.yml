@@ -1,0 +1,19 @@
+resourcePath: /api/posts
+method: GET
+matchExpressions:
+- request:
+  - type: query
+    key: order
+    value: desc
+  response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${file}get_posts_desc.json
+- response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${file}get_posts.json

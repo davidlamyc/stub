@@ -1,0 +1,29 @@
+resourcePath: /api/posts/:id/comments
+method: GET
+matchExpressions:
+- request:
+  - type: resourceId
+    key: id
+    value: 1
+  response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${file}get_posts_1_comments.json
+- request:
+  - type: resourceId
+    key: id
+    value: 2
+  response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${file}get_posts_2_comments.json
+- response:
+    status: 200
+    headers:
+    - key: Content-Type
+      value: application/json
+    body: ${script}get_posts_id_comments.js

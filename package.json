@@ -1,0 +1,23 @@
+{
+  "name": "@staizen/stub-server-infra",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "stub-server-infra": "./bin/stub-server-infra.js"
+  },
+  "scripts": {
+    "server:stub:sample": "./bin/stub-server-infra.js ./sample./config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "glob": "^7.1.6",
+    "js-yaml": "^3.14.0",
+    "jsonpath": "^1.0.2",
+    "nodemon": "^2.0.4",
+    "url-pattern": "^1.0.3",
+    "yargs": "^15.4.0"
+  }
+}

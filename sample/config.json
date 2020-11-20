@@ -1,0 +1,5 @@
+{
+    "rules": "./sample/rules/**/*.yml",
+    "responses": "./sample/responses/**/*.{js,json}",
+    "port": 3000 
+}
